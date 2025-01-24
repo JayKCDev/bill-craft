@@ -1,0 +1,42 @@
+{
+	"name": "bill-craft-backend",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": {
+		"name": "Jay K.C.",
+		"email": "jay.kc.fullstackdeveloper@gmail.com",
+		"url": "https://github.com/JayKCDev"
+	},
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"build": "tsc && yarn && prisma generate --schema ./prisma/schema.prisma && prisma migrate deploy",
+		"start": "node dist/src/index.js",
+		"dev": "nodemon --watch ./src --exec tsx ./src/index.ts",
+		"watch": "tsc --watch"
+	},
+	"dependencies": {
+		"@prisma/client": "^6.2.1",
+		"axios": "^1.7.9",
+		"bcrypt": "^5.1.1",
+		"cookie-parser": "^1.4.7",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"express-validator": "^7.2.1",
+		"jsonwebtoken": "^9.0.2"
+	},
+	"devDependencies": {
+		"@types/bcrypt": "^5.0.2",
+		"@types/cookie-parser": "^1.4.8",
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/jsonwebtoken": "^9.0.7",
+		"@types/nodemailer": "^6.4.17",
+		"nodemon": "^3.1.9",
+		"prisma": "^6.2.1",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.3"
+	}
+}
