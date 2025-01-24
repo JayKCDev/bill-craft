@@ -19,7 +19,12 @@
 			}
 		],
 		"paths": {
-			"@/*": ["./*"]
+			"@/*": ["./app*"],
+			"@/components/*": ["./components/*"],
+			"@/app/*": ["./app/*"],
+			"@/lib/*": ["./lib/*"],
+			"@/utils/*": ["./utils/*"],
+			"@/public/*": ["./public/*"]
 		},
 		"baseUrl": "."
 	},
@@ -28,7 +33,13 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"next-env.d.ts",
-		"build/types/**/*.ts"
+		"build/types/**/*.ts",
+		"pages/**/*",
+		"app/**/*",
+		"src/**/*",
+		"components/**/*",
+		"lib/**/*",
+		"public/**/*"
 	],
 	"exclude": ["node_modules"]
 }
