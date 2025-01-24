@@ -10,7 +10,7 @@
 	"license": "MIT",
 	"private": false,
 	"scripts": {
-		"build": "tsc && yarn && prisma generate --schema ./prisma/schema.prisma && prisma migrate deploy",
+		"build": "yarn && tsc",
 		"start": "node dist/src/index.js",
 		"dev": "nodemon --watch ./src --exec tsx ./src/index.ts",
 		"watch": "tsc --watch"
