@@ -50,6 +50,7 @@ export const handleUserSubmit = createAsyncThunk(
 			const response = await apiCall;
 			return response.data;
 		} catch (err) {
+			console.log(`handleUserSubmit err ${JSON.stringify(err)}`);
 			return thunkAPI.rejectWithValue(err.response.data.message);
 		}
 	}
@@ -144,6 +145,11 @@ const authSlice = createSlice({
 			setAuthCookies(action.payload.token, isProfileComplete);
 		});
 		builder.addCase(handleUserSubmit.rejected, (state, action) => {
+			console.log(
+				`handleUserSubmit.rejected ${JSON.stringify(state)}, ${JSON.stringify(
+					action
+				)}`
+			);
 			state.isLoading = false;
 		});
 

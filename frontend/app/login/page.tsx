@@ -47,6 +47,7 @@ const Login = () => {
 		try {
 			await dispatch(handleUserSubmit(form));
 		} catch (error) {
+			console.log(error);
 			toast.error("Error logging in...");
 		}
 	};
