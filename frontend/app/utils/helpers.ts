@@ -27,9 +27,9 @@ export const setAuthCookies = (
 ) => {
 	const cookieOptions = {
 		path: "/",
-		httpOnly: process.env.NODE_ENV === "production",
+		// httpOnly: process.env.NODE_ENV === "production",
 		secure: process.env.NODE_ENV === "production",
-		sameSite: "strict",
+		sameSite: process.env.NODE_ENV === "production" ? "lax" : "strict",
 		maxAge: 60 * 60, // 1 hour expiry
 	};
 
