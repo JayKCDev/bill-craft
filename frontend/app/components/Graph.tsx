@@ -1,9 +1,8 @@
 "use client";
-
 import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
+	ChartContainer,
+	ChartTooltip,
+	ChartTooltipContent,
 } from "@/components/ui/chart";
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 import { Graph } from "@/app/utils/constants";
