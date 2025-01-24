@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 	// Whitelisted allowed origins
 	const allowedOrigins =
 		process.env.NODE_ENV === "production"
-			? [process.env.FRONTEND_URL, "http://localhost:3000"]
+			? [process.env.FRONTEND_URL]
 			: ["http://localhost:3000"];
 
 	const origin = req.headers.origin;
