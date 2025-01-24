@@ -2,9 +2,9 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import express, { Request, Response } from "express";
-import authRoutes from "@routes/auth.routes.js";
-import errorHandler from "@middlewares/errorHandler.js";
-import invoiceRoutes from "@routes/invoice.routes.js";
+import authRoutes from "./routes/auth.routes.js";
+import errorHandler from "./middlewares/errorHandler.js";
+import invoiceRoutes from "./routes/invoice.routes.js";
 
 dotenv.config();
 

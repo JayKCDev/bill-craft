@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
-import HttpError from "@/models/HttpError.model";
-import prisma from "@/db/prisma";
+import HttpError from "../models/HttpError.model.js";
+import prisma from "../db/prisma.js";
 import { validationResult } from "express-validator";
-import { ParsedDates, ParsedIntValues, RequestProps } from "@/utils/types";
+import { ParsedDates, ParsedIntValues, RequestProps } from "../utils/types.js";
 
 const validateAndParseInteger = (value: string, fieldName: string): number => {
 	const parsedValue = parseInt(value, 10);

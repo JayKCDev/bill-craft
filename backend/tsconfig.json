@@ -9,14 +9,6 @@
 		"esModuleInterop": true, // This will allow you to use default imports with CommonJS modules.
 		"skipLibCheck": true, // this option will skip type checking all .d.ts files.
 		"baseUrl": "./src",
-		"paths": {
-			"@/*": ["*"],
-			"@middlewares/*": ["middlewares/*"],
-			"@models/*": ["models/*"],
-			"@routes/*": ["routes/*"],
-			"@controllers/*": ["controllers/*"],
-			"@utils/*": ["utils/*"]
-		},
 		"noEmitOnError": false // Ensures output is generated even if there are errors
 	},
 	"ts-node": {

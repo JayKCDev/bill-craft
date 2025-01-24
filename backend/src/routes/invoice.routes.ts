@@ -1,7 +1,7 @@
 import express, { RequestHandler } from "express";
 import { check } from "express-validator";
-import verifyJwtToken from "@/middlewares/verifyJwtToken";
-import invoiceValidators from "@/middlewares/invoiceValidators";
+import verifyJwtToken from "../middlewares/verifyJwtToken.js";
+import invoiceValidators from "../middlewares/invoiceValidators.js";
 import {
 	editInvoice,
 	fetchInvoices,
@@ -9,7 +9,7 @@ import {
 	createInvoice,
 	markInvoiceAsPaid,
 	fetchInvoiceToView,
-} from "@/controllers/invoice.controller";
+} from "../controllers/invoice.controller.js";
 
 const router = express.Router();
 

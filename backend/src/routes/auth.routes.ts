@@ -1,8 +1,8 @@
 import express, { RequestHandler } from "express";
 import { check } from "express-validator";
-import { signup, onboardUser, logout } from "@controllers/auth.controller";
+import { signup, onboardUser, logout } from "../controllers/auth.controller.js";
 
-import verifyJwtToken from "@middlewares/verifyJwtToken";
+import verifyJwtToken from "../middlewares/verifyJwtToken.js";
 
 const router = express.Router();
 

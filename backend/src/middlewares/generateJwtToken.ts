@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import { Response } from "express";
-import { JwtTokenArgs } from "@/utils/types";
+import { JwtTokenArgs } from "../utils/types.js";
 
 export const generateJwtToken = (args: JwtTokenArgs, res: Response) => {
 	const { userId, email } = args;

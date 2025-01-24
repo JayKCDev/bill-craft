@@ -1,7 +1,7 @@
 import jwt, { JwtPayload } from "jsonwebtoken";
 import { Response, NextFunction } from "express";
-import HttpError from "@/models/HttpError.model";
-import { RequestProps } from "@/utils/types";
+import HttpError from "../models/HttpError.model.js";
+import { RequestProps } from "../utils/types.js";
 
 interface DecodedToken extends JwtPayload {
 	userId: string;

@@ -1,10 +1,15 @@
 import { NextFunction, Request, Response } from "express";
-import HttpError from "@/models/HttpError.model.js";
-import prisma from "@/db/prisma.js";
+import HttpError from "../models/HttpError.model.js";
+import prisma from "../db/prisma.js";
 import { validationResult } from "express-validator";
-import { generateJwtToken } from "@middlewares/generateJwtToken";
+import { generateJwtToken } from "../middlewares/generateJwtToken.js";
 import bcrypt from "bcrypt";
-import { User, OnboardUser, SignupResponse, RequestProps } from "@utils/types";
+import {
+	User,
+	OnboardUser,
+	SignupResponse,
+	RequestProps,
+} from "../utils/types.js";
 
 export const signup = async (
 	req: Request,
