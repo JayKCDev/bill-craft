@@ -18,6 +18,7 @@ const rootReducer = (state: any, action: any) => {
 
 export const store = configureStore({
 	reducer: rootReducer,
+	devTools: process.env.NODE_ENV === "development", // Enable DevTools only in development
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
