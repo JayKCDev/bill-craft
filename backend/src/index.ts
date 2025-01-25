@@ -23,6 +23,17 @@ app.use((req, res, next) => {
 	next();
 });
 
+// CORS package configuration (for general-purpose use)
+const corsOptions = {
+	origin: process.env.NODE_ENV === "production" ? process.env.FRONTEND_URL : "http://localhost:3000",
+	credentials: true, // Allow cookies
+	methods: "GET, POST, PATCH, DELETE, OPTIONS",
+	allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+};
+
+// Apply the `cors` package middleware (for general routes)
+app.use(cors(corsOptions));
+
 // Middleware to handle CORS
 // @ts-ignore
 app.use((req: Request, res:Response, next: NextFunction) => {
