@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 	next();
 });
 
-// CORS package configuration (for general-purpose use)
+// Basic CORS options configuration for CORS package
 const corsOptions = {
 	origin: process.env.NODE_ENV === "production" ? process.env.FRONTEND_URL : "http://localhost:3000",
 	credentials: true, // Allow cookies
@@ -33,6 +33,7 @@ const corsOptions = {
 
 // Apply the `cors` package middleware (for general routes)
 app.use(cors(corsOptions));
+app.disable("x-powered-by"); // less hackers know about our stack
 
 // Middleware to handle CORS
 // @ts-ignore
@@ -60,8 +61,6 @@ app.use((req: Request, res:Response, next: NextFunction) => {
 	}
 	next(); // Proceed with other requests
 });
-
-app.disable("x-powered-by"); // less hackers know about our stack
 
 // app.options("*", (req, res) => {
 // 	res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "*");
